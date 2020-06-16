@@ -330,7 +330,9 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     init.safailnet.rc
     init.gpuboost.rc \
-    init.gpuboost.sh
+    init.gpuboost.sh \
+    init.cpuboost.rc \
+    init.cpuboost.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
