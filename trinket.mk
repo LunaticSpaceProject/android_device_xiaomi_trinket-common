@@ -342,11 +342,10 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl \
     rcs_service_aidl.xml \
     rcs_service_api \
-    rcs_service_api.xml
+    rcs_service_api.xml \
     init.target.rc \
     init.xiaomi_parts.rc \
-    ueventd.qcom.rc \
-    init.safailnet.rc
+    init.safailnet.rc \
     init.gpuboost.rc \
     init.gpuboost.sh \
     init.cpuboost.rc \

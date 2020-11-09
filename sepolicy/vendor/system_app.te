@@ -1,3 +1,4 @@
+
 allow system_app hal_pasrmanager_qti:binder call;
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file { getattr open read };
@@ -9,9 +10,6 @@ allow system_app sysfs_battery_supply:dir { search };
 allow system_app sysfs_battery_supply:file { read };
 allow system_app sysfs_battery_supply:file { open };
 allow system_app sysfs_battery_supply:file { getattr };
-
-# FM radio needs to set fm properties
-set_prop(system_app, fm_prop)
 
 # zram
 r_dir_file(system_app sysfs_zram)
@@ -30,8 +28,6 @@ allow system_app sysfs_vibrator:file open;
 allow system_app sysfs_vibrator:file getattr;
 allow system_app spectrum_prop:property_service set;
 get_prop(system_app, spectrum_prop);
-allow system_app camera_prop:property_service set;
-get_prop(system_app, camera_prop);
 allow system_app sysfs_leds:dir search;
 allow system_app sysfs_leds:file { open getattr write };
 allow system_app sysfs:file { getattr open read write };
@@ -39,8 +35,6 @@ allow system_app sysfs:file { getattr open read write };
 allow system_app sysfs_backlight:file { open read getattr write };
 allow system_app sysfs_egain:file { open read getattr write };
 allow system_app sysfs_hgain:file { open read getattr write };
-allow system_app sysfs_mgain:file { open read getattr write };
-allow system_app sysfs_sgain:file { open read getattr write };
 allow system_app sysfs_fcharge:file { open read getattr write };
 allow system_app sysfs_tbrightness:file { open getattr write };
 allow system_app spectrum_prop:property_service set;
@@ -48,7 +42,6 @@ allow system_app sysfs_fps:file rw_file_perms;
 
 allow system_app sysfs_torch:dir search;
 allow system_app sysfs_torch:file rw_file_perms;
-allow system_app sysfs_leds:dir { search };
 allow system_app sysfs_chargeled:file { open read getattr write };
 allow system_app sysfs_yintensity:file { open getattr write };
 allow system_app sysfs_fastcharge:file { open read getattr write };
